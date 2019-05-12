@@ -70,6 +70,7 @@ public class Game implements Runnable
 
 		inGameSettings = new InGameSettings(handler);
 
+
 		State.setCurrentState(menuState);
 		initState();
 	}
@@ -141,11 +142,9 @@ public class Game implements Runnable
 					updates = 0;
 					frames = 0;
 				}
-
 			}
 		}
 		stop();
-
 	}
 
 	public synchronized void start() {
@@ -155,7 +154,6 @@ public class Game implements Runnable
 
 		gameThread = new Thread(this, "GameThread");
 		gameThread.start();
-
 	}
 
 	public synchronized void stop() {
